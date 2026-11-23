@@ -3,46 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Studio</title>
-  <meta name="description" content="Calendario di studio personale: materie, esami, sessioni, timer e note. I dati restano sul telefono.">
-  <meta name="theme-color" content="#F2F4F7" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0F1420" media="(prefers-color-scheme: dark)">
+  <title>StudyFlow</title>
+  <meta name="description" content="Pianificazione dello studio universitario. I dati restano sul dispositivo.">
+  <meta name="theme-color" content="#2B2B2E">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Studio">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="StudyFlow">
   <meta name="format-detection" content="telephone=no">
-  <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icons/icon-180.png">
   <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32.png">
-  <link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/plex-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="app.css">
-  <script>
-    // tema impostato prima del disegno, per evitare il lampo di colore
-    try {
-      var s = JSON.parse(localStorage.getItem('studio.data.v1') || '{}');
-      var t = s && s.settings && s.settings.theme;
-      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
-    } catch (e) {}
-  </script>
-</head>
+  <script type="module" crossorigin src="./assets/index-DMGivQQ5.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-D3otr6k4.css">
+<link rel="manifest" href="./manifest.json"></head>
 <body>
-  <main class="app" id="view" aria-live="polite"></main>
-
-  <div class="tabs">
-    <nav aria-label="Sezioni">
-      <button data-act="tab" data-tab="cal"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" data-icon="calendar"></svg>Calendario</button>
-      <button data-act="tab" data-tab="sub"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" data-icon="book-open"></svg>Materie</button>
-      <button data-act="tab" data-tab="tim"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" data-icon="timer"></svg>Timer</button>
-      <button data-act="tab" data-tab="not"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" data-icon="notebook-pen"></svg>Note</button>
-      <button data-act="tab" data-tab="sta"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" data-icon="chart-column"></svg>Progressi</button>
-    </nav>
-  </div>
-
-  <div class="toast" id="toast" role="status"></div>
-
-  <script src="icons.js"></script>
-  <script src="app.js"></script>
+  <div id="root"></div>
 </body>
 </html>
